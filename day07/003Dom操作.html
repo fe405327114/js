@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            var $div = $('#div01'),
+                $p = $('#p01'),
+                $h2 = $('#h201');
+
+            //在现存元素的内部，从后面放入元素
+            //    $div.append($p);
+            //    $p.appendTo($div);
+
+            //在现存元素的内部，从前面放入元素
+            //    $div.prepend($h2);
+            $h2.prependTo($div);
+
+            // after()和insertAfter()：
+            // 在现存元素的外部，从后面放入元素
+
+            // before()和insertBefore()：
+            // 在现存元素的外部，从前面放入元素
+
+
+                //创建新的div
+                 var $newdiv01=$('<div>')
+                var $newdiv=$('<div>这是一个新的div</div>');
+                $div.before($newdiv);
+
+                //删除标签
+                $newdiv01.remove();
+
+        })
+
+
+    </script>
+</head>
+
+<body>
+    <h2 id="h201"> div01外面的h2标签</h2>
+    <p id="p01">div01外面的p标签</p>
+
+    <div id="div01">
+        <h3>div01里面h3</h3>
+        <p>div01里面的p标签</p>
+
+
+    </div>
+</body>
+
+</html>

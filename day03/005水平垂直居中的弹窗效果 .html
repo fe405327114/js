@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .pop {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: aliceblue;
+            /* 设置固定定位，相对于浏览器窗口 */
+            position: fixed;
+            /* 定位元素水平垂直居中的技巧 */
+            left: 50%;
+            margin-left: -251px;
+            top: 50%;
+            margin-top: -151px;
+            /* 将弹框元素层级设置为最高 */
+            z-index: 9999;
+        }
+
+        .mask {
+            position: fixed;
+            /*设置为固定定位高度和宽度就可以参照浏览器  */
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            background: lightpink;
+            /* 设置透明度 */
+            opacity: 0.3;
+            /* 兼容IE */
+            filter: alpha(opacity=30);
+            z-index: 9998;
+        }
+        /*设置隐藏 */
+        .pop_con{
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>页面的内容</h1>
+    <div class="pop_con" style="display:block">
+        <div class="pop">
+            <h3>弹框标题</h3>
+            <p>弹框的内容</p>
+
+        </div>
+        <div class="mask"></div>
+    </div>
+</body>
+
+</html>

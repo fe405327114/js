@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            // id选择器
+            var $div = $('#div01');
+            //类选择器
+            var $div2=$('.div02')
+            //标签选择器
+            var $li=$('li')
+            //层级选择器
+            var $span=$('.div02 span')
+
+            // 选择命名标签
+            var $divName=$('div[name="div02"]')
+
+            //选择包含span的div
+
+            var $hasSpan=$('div').has('span')
+
+           
+            $div.css({'color':'red','font-size':30})
+            $div2.css({'color':'green','fontSize':'30px'})
+            $li.css({'color':'gold','background':'pink','list-style':'none'})
+            $span.css({'color':'blue','font-size':50})
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <div id="div01">这是一个div</div>
+    <div class="div02">这是<span>第二个div</span></div>
+    <div class="div02">这是第san个div</div>
+    <ul>
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+    </ul>
+</body>
+
+</html>

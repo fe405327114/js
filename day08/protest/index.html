@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $.ajax({
+            url: 'js/data01.json',
+            Type: 'get',
+            dataType: 'json',
+            success: function (dat01) {
+                $.ajax({
+                    url: 'js/data02.json',
+                    Type: 'get',
+                    dataType: 'json',
+                    success: function (dat02) {
+                        console.log([dat01, dat02]);
+                    }
+                })
+            }
+
+
+
+        })
+
+
+    //通过创建Promise对象的方法
+        let pro01 = new Promise(function (resolve, reject) {
+            $.ajax({
+                url: 'js/data01.json',
+                Type: 'get',
+                dataType: 'json',
+            }).done(function (dat) {
+                resolve(dat);
+            }).fail(function (err) {
+                reject(err);
+            })
+
+        });
+
+    
+      //处理结果
+      pro01.then(function(dat){
+          console.log(dat);
+      }).catch(function(err){
+          console.log(err);
+      });
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

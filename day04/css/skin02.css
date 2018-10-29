@@ -1,0 +1,10 @@
+body{
+    background:papayawhip;
+}
+input{
+    width:200px;
+    height: 50px;
+    background:powderblue;
+    border-radius: 25px;
+    border: 0px;
+}

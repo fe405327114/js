@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+    $(function(){
+        var $li=$('.list li')
+        var $nounderline=$('.list')
+        //绑定click事件
+        $li.click(function(){
+        //this表示当前发生事件的对象(原生js对象)
+        //this.style.background='red';
+
+        //jquery对象写法
+        $(this).css({background:'pink',listStyle:'none'});
+        //弹出索引值
+        alert($(this).index());
+
+        })
+
+    })
+    
+    </script>
+
+</head>
+<body>
+    <ul class="list">
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+        <li>列表文字</li>
+    </ul>
+</body>
+</html>

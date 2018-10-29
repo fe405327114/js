@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload=function(){
+        var oBtn=document.getElementById("btn")
+        var oDiv=document.getElementById("div01")
+        // function BtnChange(){
+        //     oDiv.style.width='300px';
+        //     oDiv.style.height='200px';
+        //     oDiv.style.background='pink';
+        // }
+        // // BtnChange()
+        
+        //匿名函数
+        oBtn.onclick=function(){
+            oDiv.style.width='300px';
+            oDiv.style.height='200px';
+            oDiv.style.background='pink';
+        }
+
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="改变样式" id="btn">
+    <div id="div01">这是一个div</div>
+</body>
+</html>

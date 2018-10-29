@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <style>
+    .box{
+        width:200px;
+        height: 200px;
+        background: pink;
+    }
+    </style>
+    <script>
+    $(function(){
+        var $btn=$('#btn')
+        var $box=$('.box')
+        $btn.click(function(){
+            //animate参数
+            //参数一：样式属性，字典形式
+            //参数二：动画持续时间 ，默认是400毫秒
+            //参数三：动画形式，默认问'swing',缓冲运动，还有'linear',匀速运动
+            //参数四：动画的回调函数，匿名函数，在动画结束时自动调用
+         $box.animate({
+          width:1000
+
+         },5000,'swing',function fnMove(){
+            $box.animate( {
+                'margin-top':1000,
+            },800,'linear',function(){
+                $box.animate({
+                    width:200,
+                    marginTop:0
+                },2000,'swing',function(){
+                    fnMove()
+                })
+            } )
+         })
+        })
+    })
+    
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" value="动画">
+    <div class="box"></div>
+</body>
+</html>

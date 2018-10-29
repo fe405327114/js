@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    /* 1,定义标签选择器 */
+div{
+    color:red;
+}
+/* 2,定义类选择器 */
+.blue{
+    color:blue;
+}
+.big{
+   font-size :30px;
+}
+/* 3,定义层级选择器 */
+.blue span{
+    color: purple;
+    font-size: 30px;
+}
+
+</style>
+
+</head>
+<body>
+<div>
+    这是一个div
+</div> 
+
+<div class="blue"> 
+    这是第二个div
+</div>
+
+<p class="big blue">这是p标签</p>
+</body>
+
+
+<p class="blue">hello<span>这是一个span标签</span>world</p>
+
+<span>外面的span</span>
+</html>

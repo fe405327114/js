@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //创建一个类
+    class Person {
+        //构造函数
+      constructor(name,age){
+          this.name=name;
+          this.age=age;
+      }
+
+
+      showName(){
+          alert('我的名字是'+this.name);
+      }
+      showAge(){
+          alert('我的年龄是'+this.age);
+      }
+
+    }
+ //实例化对象
+    let xiaoMing =new Person('小明',23);
+    
+    //调用对象的方法
+    xiaoMing.showName();
+    xiaoMing.showAge();
+
+    //继承
+    class student extends Person{
+
+        constructor(name,age,school){
+            super(name,age);
+            this.school='NCU';
+        }
+
+        showSchool(){
+            alert('我的学校是'+this.school);
+        }
+    }
+
+    let xiaoHong=new student('小红',18,'NCU');
+
+    //调用方法
+    xiaoHong.showName();
+    xiaoHong.showSchool();
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

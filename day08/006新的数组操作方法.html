@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    let aList=['a','b','c'];
+
+    //map方法遍历数组,一个参数表示元素，两个元素的话
+    //第二个参数为索引值
+    aList.map(function(item,i){
+        alert(i+'|'+item);
+    })
+   
+   //cancat 方法拼接数组和新的数组成员(可以为数组或数组元素)，返回新的数组
+    
+    let aList03=['haha',23]
+    let aList02=aList.concat(aList03,'d',123);
+    alert(aList02);
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

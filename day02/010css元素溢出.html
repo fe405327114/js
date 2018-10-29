@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .con{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 50px auto;
+            /* 在父级上设置子级超出的部分如何显示 */
+            /* overflow: hidden; 隐藏超出部分*/
+            /* auto超出则产生滚动条，scroll不管是否超出都显示滚动条 */
+            overflow: auto;
+        }
+        .box{
+            width: 200px;
+            height: 500px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

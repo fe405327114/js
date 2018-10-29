@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    var sJson='{\
+        "name":"Tom",\
+        "age":18,\
+        "hobby":["study","shopping"],\
+        "school":{"name":"NCU", "address":"nanchang"}\
+        }';
+        //最后一个元素后面不能加逗号
+
+
+      //将json数据转化成js对象格式
+    var oJson=JSON.parse(sJson);
+
+    alert(oJson.name);
+    alert(oJson.hobby[1]);
+    alert(oJson.school.address);
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

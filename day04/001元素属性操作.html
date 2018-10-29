@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+.sty01{
+    color: red;
+    font-size: 20px;
+}
+.sty02{
+    color: pink;
+    font-size: 30px;
+}
+</style>
+    <script>
+    window.onload=function(){
+        var oDiv=document.getElementById('div01');
+        var oA=document.getElementById('link01');
+        // 读取属性值
+        var sId=oDiv.id
+        // alert(sId);
+        // 写属性值
+         oDiv.style.color='red';
+         oDiv.style.fontSize='30px';
+        //  设置class属性值
+        oA.className="sty02";
+        // 操作元素包裹的内容
+        // 读取
+         var sTr=oDiv.innerHTML;
+         alert(sTr);
+        //  写
+        oDiv.innerHTML='改变后的文字';
+        oDiv.innerHTML='<a href="http://www.baidu.com">百度网</a>';
+    }
+    </script>
+</head>
+<body>
+    <div id="div01">这是一个div</div>
+    <a href="#" class="sty01" id="link01">这是一个连接</a>
+</body>
+</html>

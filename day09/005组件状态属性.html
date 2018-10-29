@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/babel.min.js"></script>
+</head>
+<body>
+    
+  <div id="root"></div>
+  <script type="text/babel">
+  class Increase extends React.Component{
+    constructor(props){
+       super(props);
+       this.state={iNum:10}
+   }
+   //要通过setstate方法改变state里的值 
+   //setstate里面可以传一个对象，也可以传一个方法，函数需要返回一个对象
+   fnAdd(){
+   /* this.setState(){
+        iNum:this.state.iNum+1
+    }*/
+
+    // this.setState(function(prevState) {
+    //     return {iNum:prevState.iNum+1}
+    // })
+    // 简写
+    this.setState(prevState=>
+            ({iNum:prevState.iNum+1})
+    )
+
+   }
+
+
+  render(){
+      return    (
+       <div>
+       <p>{this.state.iNum}</p>  
+       <input type="button" value="increaseNum" onClick={this.fnAdd.bind(this)}/>
+
+        </div>
+        
+      );
+  }
+
+
+  }
+  ReactDOM.render( <Increase />,
+   document.getElementById('root')
+
+  );
+  
+  
+  </script>
+
+</body>
+</html>

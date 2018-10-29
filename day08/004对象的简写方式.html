@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    let name="tom";
+    let age=18;
+
+
+    let person={
+       name:name,
+       age:age,
+       showName:function(){
+           alert(this.name);
+       },
+       showAge:function(){
+           alert(this.age);
+       }
+
+    }
+    person.showName();
+
+    //上面对象可以简写为
+    let person01={
+      name,
+      age,
+      showName(){
+        alert(this.name);
+      },
+      showAge(){
+        alert(this.age);
+      }
+
+    }
+    person01.showAge();
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

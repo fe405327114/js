@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .list{
+        /*去掉列表的小圆点*/
+        list-style: none;
+
+        padding: 0px;
+        margin: 0px;
+    }
+    .list li{
+        line-height: 50px;
+        border-bottom: 1px solid black;
+       
+    }
+    .indent{
+        text-indent: 2em;
+    }
+    </style>
+</head>
+<body>
+       <!--ul>li{列表文字}*6-->
+   <ul class="list">
+       <li class="indent">列表文字</li>
+       <li>列表文字</li>
+       <li>列表文字</li>
+       <li>列表文字</li>
+       <li>列表文字</li>
+       <li>列表文字</li>
+   </ul>
+  <!--ul>(li>a{列表文字})*6-->
+   <ul class="list">
+       <li><a href="#">列表文字<p>
+   </ul>
+</body>
+</html>

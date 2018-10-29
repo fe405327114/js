@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //直接量的方式定义对象
+    var person = {
+      
+      name : 'Tom',
+
+      age: 18,
+
+      showName: function(){
+          alert('My name is'+this.name)
+      },
+      showAge:function(){
+          alert('My age'+this.age)
+      }
+
+    }
+    //调用对象的属性
+
+    alert(person.name);
+
+    //调用对象的方法
+    person.showAge();
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

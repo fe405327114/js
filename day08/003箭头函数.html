@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        function fnAdd(a,b){
+            let rs=a+b;
+            alert(rs);
+        }
+        fnAdd(10,5);
+        */
+        //通过匿名函数赋值
+        /* let fnAdd=function(a,b){
+             let rs=a+b;
+             alert(rs);
+         }
+         fnAdd(10,5);*/
+        //箭头函数
+        let fnAdd = (a, b) => {
+            let rs = a + b;
+            alert(rs);
+        }
+        fnAdd(10, 5);
+
+        let fnSub = (a, b) => a + b;
+        //相当于
+        // let fnSub=(a,b)=>{
+        //   return a+b;
+        //}
+        fnAdd(10, 5);
+
+
+        // 函数的返回值如果是javascript对象时，对象需要加括号
+        let fn = () => ({ "a": 5 });
+
+        //箭头函数的作用，可以绑定对象中的this
+        var person = {
+            name: "tom",
+            age: 10,
+            showName: function () {
+                setTimeout(() => {
+                    alert(this.name);
+                }, 1000)
+            }
+        }
+        person.showName();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

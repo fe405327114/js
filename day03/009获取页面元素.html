@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //整个页面加载完后之后，再执行函数体内代码
+        window.onload=function(){
+            var oDiv = document.getElementById('div01');
+            oDiv.style.color="red";
+            oDiv.style.width='300px';
+            oDiv.style.height='300px';
+            oDiv.style.background='gold';
+        }
+    
+    </script>
+</head>
+<body>
+    <div id="div01">这是一个div</div>
+</body>
+</html>

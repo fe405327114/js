@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //数组的解构赋值
+
+    let aList=[1,2,3];
+
+    let [a,b,c]=aList;
+
+    alert(a);
+
+ //对象的解构赋值
+    let person ={name:"tom",age:19};
+
+    let {name,age}=person;
+
+    alert(name);
+    //函数的解构赋值
+    
+    function fnPerson({name,age}){
+        alert(`我的名字是:${name},
+        我得年龄是:${age}`)
+    }
+    fnPerson(person);
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
